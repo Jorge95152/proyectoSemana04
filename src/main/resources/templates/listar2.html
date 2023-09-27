@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>Lista</title>
+</head>
+
+<body>
+	<h1>Listado de Personas</h1>
+	<table border="1">
+		<thead>
+			<tr>
+				<td>Id</td>
+				<td>Apellidos</td>
+				<td>Nombres</td>
+				<td>Edad</td>
+				<td>Sexo</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="p : ${lpersonas}">
+				<td th:text="${p.Id}"></td>
+				<td th:text="${p.Apellidos}"></td>
+				<td th:text="${p.Nombres}"></td>
+				<td th:text="${p.Edad}"></td>
+				<td th:text="${p.Sexo}"></td>
+			</tr>
+		</tbody>
+	</table>
+
+</body>
+
+</html>
